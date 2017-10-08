@@ -1,7 +1,6 @@
 import random
 
-print("Hit enter to roll")
-userInput = input()
+userInput = input("Hit enter to roll\n")
 
 if userInput is "":
     roll = random.randrange(1, 6)
