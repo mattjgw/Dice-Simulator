@@ -3,8 +3,9 @@ import random
 again = True
 
 while again is True:
+    numberOfDice = int(input("How many dice would you like to roll?\n"))
     roll = input("Hit enter to roll\n")
-    result = random.randrange(1, 6)
+    result = random.randrange(numberOfDice, 6*numberOfDice)
     print("You rolled a", result, "\n")
     answer = input("Do you want to roll again? (Y/N)\n")
     exit = 0
