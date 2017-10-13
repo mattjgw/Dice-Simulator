@@ -3,7 +3,11 @@ import random
 again = True
 
 while again is True:
-    numberOfDice = int(input("How many dice would you like to roll?\n"))
+    try:
+        numberOfDice = int(input("How many dice would you like to roll?\n"))
+    except ValueError:
+        print("Please enter an integer")
+        continue
     roll = input("Hit enter to roll\n")
     result = random.randrange(numberOfDice, 6*numberOfDice)
     print("You rolled a", result, "\n")
@@ -19,5 +23,4 @@ while again is True:
             exit = 1
         else:
             answer = input("Enter either Y or N")
-
 
